@@ -1,6 +1,6 @@
 {
   "name": "@zapal/payload-email-sendgrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Payload CMS SendGrid Email Adapter",
   "private": false,
   "author": {
@@ -23,16 +23,16 @@
     "url": "https://github.com/zapal-tech/payload-email-sendgrid.git"
   },
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./dist/index.ts",
   "files": [
     "dist"
   ],
-  "types": "./src/index.ts",
+  "types": "./dist/index.ts",
   "exports": {
     ".": {
-      "import": "./src/index.ts",
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
+      "import": "./dist/index.ts",
+      "types": "./dist/index.ts",
+      "default": "./dist/index.ts"
     }
   },
   "scripts": {
