@@ -213,7 +213,7 @@ function mapAttachments(attachments: SendEmailOptions['attachments']): SendGridS
   });
 }
 
-export type SendGridSendEmailOptions = {
+type SendGridSendEmailOptions = {
   personalizations: Personalization[];
   /**
    * Sender email address object. "email" property is required; to include a friendly name, use the "name" property.

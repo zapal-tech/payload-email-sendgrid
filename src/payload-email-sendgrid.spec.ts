@@ -1,6 +1,6 @@
 import { jest } from '@jest/globals';
 import { Payload } from 'payload';
-import { sendGridAdapter, SendGridSendEmailOptions } from '.';
+import { sendGridAdapter } from '.';
 
 describe('payload-email-sendgrid', () => {
   const defaultFromAddress = 'hello+default@zapal.tech';
@@ -53,7 +53,7 @@ describe('payload-email-sendgrid', () => {
     const request = global.fetch.mock.calls[0][1];
 
     expect(request.headers.Authorization).toStrictEqual(`Bearer ${apiKey}`);
-    expect(JSON.parse(request.body)).toMatchObject<SendGridSendEmailOptions>({
+    expect(JSON.parse(request.body)).toMatchObject({
       from: {
         email: from.split(' <')[0],
         name: from.split(' <')?.[1] ? from.split(' <')[1].replace('>', '') : undefined,
