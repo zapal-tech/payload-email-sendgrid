@@ -93,8 +93,8 @@ function mapPayloadEmailToSendGridEmail(
   if (message.html || message.text) {
     email.content = [];
 
-    if (message.html) email.content.push({ type: 'text/html', value: message.html.toString?.() || '' });
     if (message.text) email.content.push({ type: 'text/plain', value: message.text.toString?.() || '' });
+    if (message.html) email.content.push({ type: 'text/html', value: message.html.toString?.() || '' });
   }
 
   if (message.replyTo) {

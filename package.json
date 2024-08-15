@@ -1,6 +1,6 @@
 {
   "name": "@zapal/payload-email-sendgrid",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Payload CMS SendGrid Email Adapter",
   "private": false,
   "author": {
