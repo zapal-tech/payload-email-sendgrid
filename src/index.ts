@@ -68,6 +68,10 @@ function mapPayloadEmailToSendGridEmail(
   defaultFromAddress: string,
   defaultFromName: string,
 ): SendGridSendEmailOptions {
+  const cc = mapAddresses(message.cc);
+  const bcc = mapAddresses(message.bcc);
+  const attachments = mapAttachments(message.attachments);
+
   const email: SendGridSendEmailOptions = {
     // Required
     from: mapFromAddress(message.from, defaultFromName, defaultFromAddress),
@@ -77,13 +81,13 @@ function mapPayloadEmailToSendGridEmail(
         // Required
         to: mapAddresses(message.to),
         // Other To fields
-        cc: mapAddresses(message.cc),
-        bcc: mapAddresses(message.bcc),
+        cc: cc.length ? cc : undefined,
+        bcc: bcc.length ? cc : undefined,
       },
     ],
 
     // Optional
-    attachments: mapAttachments(message.attachments),
+    attachments: attachments?.length ? attachments : undefined,
   };
 
   if (message.html || message.text) {
