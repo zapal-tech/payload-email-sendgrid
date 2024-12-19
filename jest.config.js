@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync } from 'fs'
 
 /** @type {import('jest').Config} */
 const config = {
@@ -14,6 +14,6 @@ const config = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { ...JSON.parse(readFileSync(`${import.meta.dirname}/.swcrc`, 'utf-8')) }],
   },
   verbose: true,
-};
+}
 
-export default config;
+export default config

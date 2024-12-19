@@ -17,7 +17,7 @@ pnpm add @zapal/payload-email-sendgrid
 
 ```ts
 // payload.config.js
-import { sendGridAdapter } from '@zapal/payload-email-sendgrid';
+import { sendGridAdapter } from '@zapal/payload-email-sendgrid'
 
 export default buildConfig({
   email: sendGridAdapter({
@@ -25,5 +25,5 @@ export default buildConfig({
     defaultFromName: 'Zapal',
     apiKey: process.env.SENDGRID_API_KEY || '',
   }),
-});
+})
 ```
