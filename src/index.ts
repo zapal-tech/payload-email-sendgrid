@@ -105,7 +105,7 @@ function mapPayloadEmailToSendGridEmail(
   }
 
   if (message.replyTo) {
-    if (message.replyTo === 'string') {
+    if (typeof message.replyTo === 'string') {
       email.reply_to = {
         email: extractEmailFromAddressString(message.replyTo),
         name:
